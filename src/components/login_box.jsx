@@ -91,6 +91,7 @@ function LoginBox() {
             if(response.data.length == 1){
                 dispatch(setData(response.data[0]))
                 localStorage.setItem("id", response.data[0]?.id) //? ngecek ada ga indeks ke 0, kalau ada ambil id
+                navigate("/dashboard");
                 window.location.reload();
             }else{
                 toast({

@@ -10,16 +10,20 @@ import Required from "./components/required";
 
 const router = createBrowserRouter([
   {path: '/', element: <Home></Home>},
-  {path: '/dashboard', element: <Required></Required>, children: [
-    {path: '/dashboard', element:<Dashboard></Dashboard>},
-    {path: 'profile', element:<Account></Account>}
+  {element: <Required></Required>, children: [
+    {path: '/dashboard', element: <Dashboard></Dashboard>},
+    {path: '/profile', element:<Account></Account>}
   ]}
+  // {path: '/dashboard', element: <Required></Required>, children: [
+  //   {path: '/dashboard', element:<Dashboard></Dashboard>},
+  //   {path: '/profile', element:<Account></Account>}
+  // ]}
 ]);
 
 function App() {
   const id = localStorage.getItem("id");
   const dispatch = useDispatch();
-  // console.log(id);
+  console.log(id);
   const keepLogin = async () => {
     try{
         const response = await axios.get(`http://localhost:2000/users/${id}`)

@@ -117,6 +117,12 @@
       "username": "andrefebri",
       "tweet": "Ini tweet",
       "id": 9
+    },
+    {
+      "name": "Mark Zuckeberg",
+      "username": "Zuck",
+      "tweet": "I love Threads",
+      "id": 10
     }
   ]
 }
